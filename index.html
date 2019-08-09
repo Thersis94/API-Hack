@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>API Hack</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-      <banner>
-          Place Holder for the name of my website.
-      </banner>
-      <span class="search-bar">
-          <form>
-              <label>Enter the ingredients that you have seperated by a comma.
-              </label>
-              <input id="user-input" type="text">
-              <input type="submit">
-          </form>
-      </span>
-      <span class="preset-searches">
 
-      </span>
-      <span class="search-results">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>API Hack</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Sancreek&display=swap" rel="stylesheet"> 
+</head>
 
-      </span>
-      <span class="drink-page">
+<body>
+  <banner class="page-name">
+    Lazy Liquor Library
+  </banner>
+  <span class="search-bar">
+    <fieldset class="fieldset">
+    <form>
+      <label class="search-label">Enter the ingredients that you have seperated by a comma or highlight a few of the more common liquors.
+      </label>
+      <input id="user-input" type="text">
+      <input type="submit">
+      <input type="checkbox" _id="" value="vodka" name="spirits">
+      <label for="Vodka">Vodka</label>
+      <input type="checkbox" _id="" value="gin" name="spirits">
+      <label for="Gin">Gin</label>
+      <input type="checkbox" _id="" value="rum" name="spirits">
+      <label for="Rum">Rum</label>
+      <input type="checkbox" _id="" value="whiskey" name="spirits">
+      <label for="Whiskey">Whiskey</label>
+      <input type="checkbox" _id="" value="tequila" name="spirits">
+      <label for="Tequila">Tequila</label>
+      <input type="checkbox" _id="" value="wine" name="spirits">
+      <label for="Wine">Wine</label>
+    </form>
+  </fieldset>
+  </span>
+  <span class="preset-searches">
 
-      </span>
+  </span>
+  <span class="search-results">
+
+  </span>
+  <span class="drink-page">
+
+  </span>
 
 
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js">
-      </script>
-    <script src="script.js"></script>
-  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js">
+  </script>
+  <script src="script.js"></script>
+</body>
+
 </html>
