@@ -2,7 +2,7 @@ Lazy Liquor Library
 
 https://thersis94.github.io/API-Hack/
 
-![screen shot of Lazy Liquor Library](http://url/to/img.png)
+![screen shot of Lazy Liquor Library](https://raw.githubusercontent.com/Thersis94/API-Hack/master/ScreenShot.PNG)
 
 
 Description:
