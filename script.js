@@ -48,7 +48,7 @@ function renderSelectedItem(itemPic, itemName, itemGlass, itemIng, itemInst) {
     $(".drink-page").append(
         `
         <span class="item-page">
-        <img class="drink-pic" src=${itemPic}>
+        <img class="drink-pic" alt="a picture of ${itemName}"} src=${itemPic}>
         <span class="text-background">
         <p class="drink-name">${itemName}</p>
         <p class="drink-glass">Glass type: ${itemGlass}</p>
@@ -86,7 +86,7 @@ $(".search-results").on("click", ".drink-span", function (event) {
 })
 
 //Filter Toggle
-$("img").on("click", function(event){
+$("img").on("click", function (event) {
     $(event.currentTarget).closest("img").toggleClass("grey")
 }
 )
