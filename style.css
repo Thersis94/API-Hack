@@ -8,6 +8,10 @@ body{
     background-image: url("https://raw.githubusercontent.com/Thersis94/API-Hack/master/Background.jpg");
 }
 
+legend{
+    font-size: 2em;
+}
+
 .page-name{
     display: block;
     margin: 1vw;
@@ -89,6 +93,7 @@ flex-direction: column;
     height: 100%;
     width: 100%;
     filter: grayscale(100%);
+    cursor: pointer;
 }
 
 .grey{
@@ -125,17 +130,15 @@ input[type='checkbox']{
     color: black;
     text-shadow: 1px 1px grey;
     font-size: 1.8em;
+    cursor: pointer;
 }
 
 .results-drink-pic{
     margin: 1vw;
 height: 80%;
 width: 80%;
+cursor: pointer;
 }
-
-.drink-name{
-}
-
 
 .item-page{
     margin: 5vw;

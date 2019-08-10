@@ -85,6 +85,12 @@ $(".search-results").on("click", ".drink-span", function (event) {
     renderNextPage(userDrinkSelect)
 })
 
+//Filter Toggle
+$("img").on("click", function(event){
+    $(event.currentTarget).closest("img").toggleClass("grey")
+}
+)
+
 function fetchAPI(userInput) {
     console.log("fetching API" + ' ' + userInput)
     return fetch(`https://www.thecocktaildb.com/api/json/v2/8673533/filter.php?i=${userInput}`)
@@ -125,10 +131,5 @@ function renderResultItems(itemPic, itemName, itemId) {
     )
 }
 
-//Filter Toggle
-$("img").on("click", function(event){
-    $(event.currentTarget).closest("img").toggleClass("grey")
-}
-)
 
 $(VIEWS[STORE.currentVIEW])

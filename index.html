@@ -4,60 +4,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>API Hack</title>
+  <title>Lazy Liquor Library</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Elsie|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <banner class="page-name">
+  <header class="page-name">
     Lazy Liquor Library
-  </banner>
-  <span class="search-bar">
-    <fieldset class="fieldset">
+  </header>
+  <fieldset class="fieldset">
+      <legend>Filter By</legend>
       <form>
+          <span class="search-bar">
         <label class="search-label">Enter the ingredients that you have seperated by a comma or highlight a few of the
           more common liquors.
         </label>
-        <div class="search-bar-wrap">
-          <div class="search">
+        <span class="search-bar-wrap">
+          <span class="search">
             <input class="search-input" id="user-input" type="text">
             <input class="search-button" type="submit" value="Search">
-            <i class="fa fa-search"></i>
-          </div>
-        </div>
+          </span>
+        </span>
+          </span>
         <span class="drink-selectors">
           <span class="flex-left">
             <label class="drink-icons" for="Vodka">
-              <p class="title">Vodka</p>
-              <img class="drink-icon-img" type="image"
+              <img class="drink-icon-img" alt="A picture of vodka, will filter drinks by vodka if clicked"
                 src="https://products0.imgix.drizly.com/ci-smirnoff-no-21-vodka-2b29fd1a14c47157.jpeg?auto=format%2Ccompress&dpr=2&fm=jpeg&h=240&q=20">
               <input type="checkbox" id="Vodka" value="vodka" name="spirits">
             </label>
             <label class="drink-icons" for="Gin">
-              <p class="title">Gin</p>
-              <img class="drink-icon-img" type="image"
+              <img class="drink-icon-img" alt="A picture of gin, will filter drinks by gin if clicked"
                 src="https://static.vinepair.com/wp-content/uploads/2019/01/hendricks-card.jpg">
               <input type="checkbox" id="Gin" value="gin" name="spirits">
             </label>
           </span>
           <span class="flex-right">
             <label class="drink-icons" for="Whiskey">
-              <p class="title">Whiskey</p>
-              <img class="drink-icon-img" type="image"
+              <img class="drink-icon-img"
+                alt="A picture of whiskey, will filter drinks by whiskey if clicked"
                 src="https://products3.imgix.drizly.com/ci-jack-daniels-old-no-7-92707d5e737cf4ac.jpeg?auto=format%2Ccompress&dpr=2&fm=jpeg&h=240&q=20">
-              <input type="checkbox" id="Whiskey" value="whiskey" name="spirits">
+              <input type="checkbox" id="Whiskey" value="whisky" name="spirits">
             </label>
-            <label class="drink-icons" for="tequila">
-                <p class="title">Tequila</p>
-                <img class="drink-icon-img" type="image"
-                  src="https://www.wallywine.com/media/catalog/product/cache/1/image/1800x/9df78eab33525d08d6e5fb8d27136e95/1/2/12183.jpg">
-                  <input type="checkbox" id="Tequila" value="tequila" name="spirits">
+            <label class="drink-icons" for="Tequila">
+              <img class="drink-icon-img"
+                alt="A picture of tequila, will filter drinks by tequila if clicked"
+                src="https://www.wallywine.com/media/catalog/product/cache/1/image/1800x/9df78eab33525d08d6e5fb8d27136e95/1/2/12183.jpg">
+              <input type="checkbox" id="Tequila" value="tequila" name="spirits">
+              </label>
           </span>
         </span>
       </form>
-    </fieldset>
-  </span>
+  </fieldset>
   <span class="preset-searches">
 
   </span>
