@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <title>API Hack</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Sancreek&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Elsie|Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,25 +15,48 @@
   </banner>
   <span class="search-bar">
     <fieldset class="fieldset">
-    <form>
-      <label class="search-label">Enter the ingredients that you have seperated by a comma or highlight a few of the more common liquors.
-      </label>
-      <input id="user-input" type="text">
-      <input type="submit">
-      <input type="checkbox" _id="" value="vodka" name="spirits">
-      <label for="Vodka">Vodka</label>
-      <input type="checkbox" _id="" value="gin" name="spirits">
-      <label for="Gin">Gin</label>
-      <input type="checkbox" _id="" value="rum" name="spirits">
-      <label for="Rum">Rum</label>
-      <input type="checkbox" _id="" value="whiskey" name="spirits">
-      <label for="Whiskey">Whiskey</label>
-      <input type="checkbox" _id="" value="tequila" name="spirits">
-      <label for="Tequila">Tequila</label>
-      <input type="checkbox" _id="" value="wine" name="spirits">
-      <label for="Wine">Wine</label>
-    </form>
-  </fieldset>
+      <form>
+        <label class="search-label">Enter the ingredients that you have seperated by a comma or highlight a few of the
+          more common liquors.
+        </label>
+        <div class="search-bar-wrap">
+          <div class="search">
+            <input class="search-input" id="user-input" type="text">
+            <input class="search-button" type="submit" value="Search">
+            <i class="fa fa-search"></i>
+          </div>
+        </div>
+        <span class="drink-selectors">
+          <span class="flex-left">
+            <label class="drink-icons" for="Vodka">
+              <p class="title">Vodka</p>
+              <img class="drink-icon-img" type="image"
+                src="https://products0.imgix.drizly.com/ci-smirnoff-no-21-vodka-2b29fd1a14c47157.jpeg?auto=format%2Ccompress&dpr=2&fm=jpeg&h=240&q=20">
+              <input type="checkbox" id="Vodka" value="vodka" name="spirits">
+            </label>
+            <label class="drink-icons" for="Gin">
+              <p class="title">Gin</p>
+              <img class="drink-icon-img" type="image"
+                src="https://static.vinepair.com/wp-content/uploads/2019/01/hendricks-card.jpg">
+              <input type="checkbox" id="Gin" value="gin" name="spirits">
+            </label>
+          </span>
+          <span class="flex-right">
+            <label class="drink-icons" for="Whiskey">
+              <p class="title">Whiskey</p>
+              <img class="drink-icon-img" type="image"
+                src="https://products3.imgix.drizly.com/ci-jack-daniels-old-no-7-92707d5e737cf4ac.jpeg?auto=format%2Ccompress&dpr=2&fm=jpeg&h=240&q=20">
+              <input type="checkbox" id="Whiskey" value="whiskey" name="spirits">
+            </label>
+            <label class="drink-icons" for="tequila">
+                <p class="title">Tequila</p>
+                <img class="drink-icon-img" type="image"
+                  src="https://www.wallywine.com/media/catalog/product/cache/1/image/1800x/9df78eab33525d08d6e5fb8d27136e95/1/2/12183.jpg">
+                  <input type="checkbox" id="Tequila" value="tequila" name="spirits">
+          </span>
+        </span>
+      </form>
+    </fieldset>
   </span>
   <span class="preset-searches">
 

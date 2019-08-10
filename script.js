@@ -47,11 +47,15 @@ function fetchDrinkAPI(userDrinkSelect) {
 function renderSelectedItem(itemPic, itemName, itemGlass, itemIng, itemInst) {
     $(".drink-page").append(
         `
-        <p class="drink-name">${itemName}</p>
+        <span class="item-page">
         <img class="drink-pic" src=${itemPic}>
-        <p class="drink-glass">${itemGlass}</p>
-        <p class="drink-ing">${itemIng}</p>
-        <p class="drink-inst">${itemInst}</p>
+        <span class="text-background">
+        <p class="drink-name">${itemName}</p>
+        <p class="drink-glass">Glass type: ${itemGlass}</p>
+        <p class="drink-ing">Ingredients: ${itemIng}</p>
+        <p class="drink-inst">Instructions: ${itemInst}</p>
+        </span>
+        </span>
         `
     )
 }
@@ -120,5 +124,11 @@ function renderResultItems(itemPic, itemName, itemId) {
         `
     )
 }
+
+//Filter Toggle
+$("img").on("click", function(event){
+    $(event.currentTarget).closest("img").toggleClass("grey")
+}
+)
 
 $(VIEWS[STORE.currentVIEW])

@@ -1,15 +1,18 @@
 *{
     box-sizing: border-box;
-    font-family: 'Goudy Bookletter 1911', serif;
+    font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
-
+body{
+    background-image: url("https://raw.githubusercontent.com/Thersis94/API-Hack/master/Background.jpg");
+}
 
 .page-name{
     display: block;
     margin: 1vw;
     text-align: center;
-    font-family: 'Sancreek', cursive;
+    font-family: 'Elsie', cursive;
     font-size: 10vw;
 }
 
@@ -17,25 +20,140 @@
     margin: 0 2vw 0 2vw;
 }
 
+.search-bar{
+    display: block;
+}
+
 .search-label{
-    font-size: 3vw;
+    display: flex;
+    width: 100%;
+    font-size: 5vw;
+    margin: 0 0 1vw 0;
+}
+
+.search{
+    display: flex;
+    position: relative;
+}
+
+.search-input{
+    width: 82%;
+    height: 10vw;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 6vw;
+    margin: 1vw 0 1vw 0;
+}
+
+.search-button{
+    width: 18%;
+    height: 10vw;
+    border-radius: 0 5px 5px 0;
+    margin: 1vw 0 1vw 0;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+}
+
+.drink-selectors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-left{
+    appearance: none;
+display: flex;
+flex-direction: column;
+
+}
+
+.flex-right{
+    appearance: none;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.drink-icons{
+    height: 40vw;
+    width: 30vw;
+    border: solid black 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.drink-icon-img{
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.grey{
+    filter: grayscale(0%);
+}
+
+.title{
+    color: black;
+    position: absolute;
+    text-shadow: 1px 1px grey;
+    font-size: 2em;
+    text-align: center;
 }
 
 
+input[type='checkbox']{
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+}
+
+.drink-span{
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.results-drink-name{
+    margin: 1vw 7vw 1vw 7vw;
+    position: absolute;
+    color: black;
+    text-shadow: 1px 1px grey;
+    font-size: 1.8em;
+}
+
+.results-drink-pic{
+    margin: 1vw;
+height: 80%;
+width: 80%;
+}
+
+.drink-name{
+}
 
 
+.item-page{
+    margin: 5vw;
+    display: flex;
+    flex-direction: row;
+}
 
+.drink-pic{
+    margin: auto;
+    height: 50%;
+    width: 50%;
+}
 
-
-
-
-
-
-
-
-
-
-
+.text-background{
+    margin: 1vw;
+    padding: 1vw;
+    background-color: black;
+}
 
 
 
@@ -44,7 +162,126 @@
 @media screen and (min-width: 800px){
 
 .page-name{
+    margin: 0 10vw 1vw 10vw;
     font-size: 10em;
     }
+
+.fieldset{
+    margin: 1vw 10vw 1vw 10vw;
+}
+
+.search-label{
+    display: flex;
+    width: 100%;
+    font-size: 3vw;
+    margin: 0 0 1vw 0;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search-input{
+    width: 60%;
+    height: 3vw;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid black;
+    color: black;
+    font-size: 2vw;
+    margin: 1vw 0 1vw 0;
+}
+
+.search-button{
+    width: 8%;
+    height: 3vw;
+    border-radius: 0 5px 5px 0;
+    margin: 1vw 0 1vw 0;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+}
+
+.drink-selectors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-left{
+    appearance: none;
+display: flex;
+flex-direction: row;
+
+}
+
+.flex-right{
+    appearance: none;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.drink-icons{
+    height: 20vw;
+    width: 15vw;
+    border: solid black 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    color: black;
+    position: absolute;
+    text-shadow: 1px 1px grey;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+.drink-span{
+    height: 20vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.results-drink-name{
+    margin: 1vw 7vw 1vw 7vw;
+    position: absolute;
+    color: black;
+    text-shadow: 1px 1px grey;
+    font-size: 1.8em;
+}
+
+.results-drink-pic{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    }
+
+.drink-span{
+        float: left;
+    }
+
+    .drink-pic{
+        margin: 1vw 0 1vw 3vw;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
 }
