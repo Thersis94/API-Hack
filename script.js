@@ -19,6 +19,7 @@ function renderWelcomePage() {
   $(".search-results").empty()
   $(".drink-page").empty()
   $(".drink-selectors").show()
+  $(".ing-list").hide()
 }
 
 function renderDirectionsPage(userDrinkSelect) {
@@ -150,6 +151,7 @@ $("#go-back").on("click", function(event) {
 //List Ingredients
 $('#ing-list-button').on("click", function(event) {
   $("#go-back").show();
+  $('.ing-list').show();
   generateIngList()
 })
 
