@@ -10,12 +10,12 @@ const VIEWS = {
 };
 
 function renderNextPage(userDrinkSelect) {
-  $(".search-results").empty();
   $(".drink-page").empty();
   VIEWS[STORE.currentVIEW](userDrinkSelect);
 }
 
 function renderWelcomePage() {
+  $("#go-back").hide();
   $(".search-results").empty()
   $(".drink-page").empty()
   $(".drink-selectors").show()
@@ -23,7 +23,8 @@ function renderWelcomePage() {
 
 function renderDirectionsPage(userDrinkSelect) {
   fetchDrinkAPI(userDrinkSelect);
-  $('.drink-selectors').hide()
+  $('.drink-selectors').hide();
+  $("#go-back").show();
 }
 
 function fetchDrinkAPI(userDrinkSelect) {
@@ -63,6 +64,7 @@ function fetchDrinkAPI(userDrinkSelect) {
 }
 
 function renderSelectedItem(itemPic, itemName, itemGlass, itemIng, itemInst) {
+  $("#go-back").show();
   $(".drink-page").append(
     `
         <span class="item-page">
@@ -81,6 +83,7 @@ function renderSelectedItem(itemPic, itemName, itemGlass, itemIng, itemInst) {
 //JQuery for Search Submit
 $("form").on("submit", function(event) {
   event.preventDefault();
+  $(".search-results").empty().show();
   const userInput = $(event.currentTarget)
     .find("#user-input")
     .val()
@@ -90,11 +93,9 @@ $("form").on("submit", function(event) {
   $(event.currentTarget)
     .find("input[name='spirits']:checked")
     .each(function() {
-      console.log(this.value)
       userHighLight.push(this.value);
     });
   userHighLight = userHighLight.join(",");
-  console.log(userHighLight)
   fetchAPI(userHighLight + "," + userInput);
   renderNextPage();
 });
@@ -102,6 +103,7 @@ $("form").on("submit", function(event) {
 //JQuery for Search List Item Select
 $(".search-results").on("click", ".drink-span", function(event) {
   event.preventDefault();
+  $(".search-results").hide();
   const userDrinkSelect = $(event.currentTarget).attr("data-id");
   STORE.currentVIEW = "Directions";
   renderNextPage(userDrinkSelect);
@@ -114,9 +116,16 @@ $("img").on("click", function(event) {
     .toggleClass("grey");
 });
 
+//Return to welcome
 $(".page-name").on("click", function(event) {
   STORE.currentVIEW = "Welcome";
   renderNextPage()
+})
+
+//Back to search
+$("#go-back").on("click", function(event) {
+  $(".drink-page").empty();
+  $(".search-results").show();
 })
 
 function fetchAPI(userInput) {

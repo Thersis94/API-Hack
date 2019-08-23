@@ -96,8 +96,40 @@ legend {
     cursor: pointer;
 }
 
+#vodka-pic {
+    border: 4px solid #AE3D3F;
+}
+
+#gin-pic {
+    border: 4px solid #13055C;
+}
+
+#whiskey-pic {
+    border: 4px solid #DC620C;
+}
+
+#tequila-pic {
+    border: 4px solid #6CAA2D;
+}
+
 .grey {
     filter: grayscale(0%);
+
+}
+
+.back-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+#go-back {
+    color: black;
+    height: 8vw;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    margin: 4vw 0 0vw 0;
 }
 
 .title {
@@ -222,6 +254,11 @@ input[type='checkbox'] {
         display: flex;
         justify-content: center;
     }
+
+    #go-back {
+        height: 3vw;
+    }
+    
     .title {
         color: black;
         position: absolute;
