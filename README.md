@@ -1,6 +1,6 @@
 Lazy Liquor Library
 
-https://thersis94.github.io/API-Hack/
+https://thersis94.github.io/Lazy-Liquor-Library/
 
 ![screen shot of Lazy Liquor Library](https://raw.githubusercontent.com/Thersis94/API-Hack/master/ScreenShot.PNG)
 
