@@ -6,8 +6,7 @@ const STORE = {
 
 const VIEWS = {
   'Welcome': renderWelcomePage,
-  'Results': renderResultsPage,
-  'Directions': renderDirectionsPage
+  'Directions': renderDirectionsPage,
 };
 
 function renderNextPage(userDrinkSelect) {
@@ -16,12 +15,15 @@ function renderNextPage(userDrinkSelect) {
   VIEWS[STORE.currentVIEW](userDrinkSelect);
 }
 
-function renderWelcomePage() {}
-
-function renderResultsPage() {}
+function renderWelcomePage() {
+  $(".search-results").empty()
+  $(".drink-page").empty()
+  $(".drink-selectors").show()
+}
 
 function renderDirectionsPage(userDrinkSelect) {
   fetchDrinkAPI(userDrinkSelect);
+  $('.drink-selectors').hide()
 }
 
 function fetchDrinkAPI(userDrinkSelect) {
@@ -88,10 +90,11 @@ $("form").on("submit", function(event) {
   $(event.currentTarget)
     .find("input[name='spirits']:checked")
     .each(function() {
+      console.log(this.value)
       userHighLight.push(this.value);
     });
   userHighLight = userHighLight.join(",");
-  STORE.currentVIEW = "Results";
+  console.log(userHighLight)
   fetchAPI(userHighLight + "," + userInput);
   renderNextPage();
 });
@@ -106,11 +109,15 @@ $(".search-results").on("click", ".drink-span", function(event) {
 
 //Filter Toggle
 $("img").on("click", function(event) {
-  event.preventDefault();
   $(event.currentTarget)
     .closest("img")
     .toggleClass("grey");
 });
+
+$(".page-name").on("click", function(event) {
+  STORE.currentVIEW = "Welcome";
+  renderNextPage()
+})
 
 function fetchAPI(userInput) {
   return fetch(

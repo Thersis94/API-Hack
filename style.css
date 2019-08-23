@@ -20,6 +20,7 @@ legend {
     text-align: center;
     font-family: 'Elsie', cursive;
     font-size: 10vw;
+    cursor: pointer;
 }
 
 .fieldset {
@@ -84,7 +85,6 @@ legend {
     height: 40vw;
     width: 30vw;
     border: solid black 2px;
-    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -110,8 +110,7 @@ legend {
 
 input[type='checkbox'] {
     position: absolute;
-    top: -9999px;
-    left: -9999px;
+    display: none;
 }
 
 .drink-span {
@@ -124,7 +123,7 @@ input[type='checkbox'] {
 }
 
 .results-drink-name {
-    margin: 1vw 7vw 1vw 7vw;
+    width: 80%;
     position: absolute;
     color: black;
     text-shadow: 1px 1px grey;
@@ -160,6 +159,9 @@ input[type='checkbox'] {
 @media screen and (min-width: 800px) {
     body {
         background-size: cover;
+    }
+    .search-results {
+        width: 100%;
     }
     .page-name {
         margin: 0 10vw 1vw 10vw;
@@ -229,22 +231,21 @@ input[type='checkbox'] {
     }
     .drink-span {
         height: 20vw;
-        display: flex;
-        justify-content: center;
-        position: relative;
+        width: 20vw;
         text-align: center;
         color: black;
     }
     .results-drink-name {
-        margin: 1vw 7vw 1vw 7vw;
+        width: 100%;
+        margin: 0;
         position: absolute;
+        left: 0px;
+        top: 2vw;
         color: black;
         text-shadow: 1px 1px grey;
         font-size: 1.8em;
     }
     .results-drink-pic {
-        padding: 0;
-        margin: 0;
         height: 100%;
         width: 100%;
     }
