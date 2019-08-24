@@ -279,6 +279,17 @@ input[type='checkbox'] {
         justify-content: center;
     }
 
+    #ing-list-button {
+        color: black;
+        height: 3vw;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid black;
+        color: black;
+        margin: 1vw 0 1vw 0;
+        cursor: pointer;
+    }
+
     #go-back {
         height: 3vw;
     }
