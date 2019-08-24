@@ -90,6 +90,8 @@ ingArray.map(function(ing) {
 }
 
 function renderIngList(ing) {
+  $(".drink-page").empty();
+  $(".search-results").hide();
   console.log(ing)
 $('.ing-list').append(
   `
