@@ -148,13 +148,15 @@ $(".page-name").on("click", function(event) {
 $("#go-back").on("click", function(event) {
   $(".drink-page").empty();
   $(".search-results").show();
+  $(".drink-selectors").show();
+  $("#go-back").hide();
 })
 
 //List Ingredients
 $('#ing-list-button').on("click", function(event) {
   $("#go-back").show();
   $('.ing-list').show();
-  generateIngList()
+  generateIngList();
 })
 
 function fetchAPI(userInput) {
